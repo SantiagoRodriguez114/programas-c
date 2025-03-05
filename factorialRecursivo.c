@@ -1,12 +1,7 @@
 #include <stdio.h>
 
 int factorial(int n){
-    
-    if (n < 0){
-        printf("Error \n");
-        return 0;
-    }
-    
+  
     if(n == 0){
         return 1;
     }else{
@@ -21,8 +16,11 @@ int main(){
     
     printf("Ingrese el numero: ");
     scanf("%d",&n);
-    
-    printf("%d",factorial(n));
-    
+
+    if(n < 0){
+        printf("Numero ingresado no valido, debe ser un numero positivo");
+    }else{
+        printf("Factorial de %d es %d", n, factorial(n));
+    }
     return 0;
 }
